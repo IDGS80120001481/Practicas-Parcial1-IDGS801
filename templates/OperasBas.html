@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block container %}
+    <h1>Calcular</h1>
+    <form action="/resultado" method="POST">
+
+        <label>N1: </label>
+        <input type="text" name="num1"/><br><br>
+
+        <label>N2: </label>
+        <input type="text" name="num2"/><br><br>
+
+        <input type="radio" name="rbd" id="rbd"  value="suma" checked/>
+        <label for="rbd">Suma<label/><br>
+
+        <input type="radio" name="rbd" id="rbd" value="resta" action="/"/>
+        <label for="rbd">Resta<label/><br>
+
+        <input type="radio" name="rbd" id="rbd" value="mult"/>
+        <label for="rbd">Multiplicación<label/><br>
+
+        <input type="radio" name="rbd" id="rbd" value="div"/>
+        <label for="rbd">División<label/><br><br>
+
+        <input type="submit" value="calcular"/>
+
+    </form>
+{% endblock %}
