@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block container %}
+{% import "_macros.html" as macros %}
+    <h1>Aplicacion WEB Coordenadas !!</h1>
+    
+    <form action="" method="POST" novalidate>
+        <div class="row">
+            <div class="form-group control-group col-xs-12 floting-label-form-control controls">
+                {{macros.coordenadas(form.coordenadaX1, class='form-control')}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group control-group col-xs-12 floting-label-form-control controls">
+                {{macros.coordenadas(form.coordenadaY1, class='form-control')}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group control-group col-xs-12 floting-label-form-control controls">
+                {{macros.coordenadas(form.coordenadaX2, class='form-control')}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group control-group col-xs-12 floting-label-form-control controls">
+                {{macros.coordenadas(form.coordenadaY2, class='form-control')}}
+            </div>
+        </div>
+        <input type="submit" id="btn1" name="btn1" value="Registrar">
+
+        <h1>La distancia es: {{resultado}}</h1>
+    </form>
+    
+{% endblock %}
