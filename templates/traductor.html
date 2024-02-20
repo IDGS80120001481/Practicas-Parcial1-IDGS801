@@ -1,0 +1,40 @@
+{% extends "layoutResistencia.html" %}
+
+{% block container %}
+{% import "_macros_traductor.html" as macros %}
+    <h1>Traductor de palabras</h1>
+    
+    <form action="" method="POST" novalidate>
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="row">
+                        <div class="form-group control-group col-xs-12 floting-label-form-control controls">
+                            {{macros.traductor(form.español, class='form-control')}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="form-group control-group col-xs-12 floting-label-form-control controls">
+                            {{macros.traductor(form.ingles, class='form-control')}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <input type="submit"  name="submit_button" value="Enviar"> 
+          <div class="row">
+            <div class="form-group control-group col-xs-12 floting-label-form-control controls">
+                {{macros.traductor(form.buscar, class='form-control')}}
+            </div>
+        </div>   
+        <div class="row">
+            <div class="form-group control-group col-xs-12 floting-label-form-control controls">
+                {{macros.traductor(form.traductor, class='form-control')}}
+            </div>
+        </div>
+        <input type="submit" name="submit_button" value="Traducir">
+    </form>
+    
+{% endblock %}
